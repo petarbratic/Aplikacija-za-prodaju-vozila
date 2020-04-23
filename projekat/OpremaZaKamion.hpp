@@ -6,7 +6,7 @@ class OpremaZaKamion: public Oprema{
         bool spavacaKabina;
         bool televizor;
         bool mikrotalasna;
-        bool tempmat;
+        bool tempomat;
 };
 
 #endif // OPREMAZAKAMION_HPP_INCLUDED

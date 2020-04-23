@@ -1,14 +1,15 @@
 #ifndef SKOLJKA_HPP_INCLUDED
 #define SKOLJKA_HPP_INCLUDED
 
+enum Materijal {CELIK, ALUMINIJUM, KARBON};
 enum Karoserija {LIMUZINA, KARAVAN, HECBEK, SUV};
 class Skoljka{
     private:
         string boja; /// ovo je ok
         Karoserija karoserija;
         ///string karoserija; // primer: limuzina (sedan), karavan, hecbek, SUV
-        string materijal; /// ako imas neke materijale na umu nek bude enum sa par nabrojivih vrednosti
-        /// (kao gore kao sto sam ja uradila sa karoserijom)
+        Materijal materijal;
+
 };
 
 #endif // SKOLJKA_HPP_INCLUDED
