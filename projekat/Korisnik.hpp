@@ -6,12 +6,18 @@ class Korisnik{
         string ime;
         string prezime;
         bool kupacIliProd;
-        /// string kupacIliProd; ja bih ovde bool stavila, lakse je
         string brojTelefona;
-        /// int brojTelefona; bolje da broj telefona bude string, ako imamo / ili -
-        /// dodala bih jos, posto je rec o korisniku na sajtu:
-        string korisnickoIme; ///ovo nek bude isto sto i email
+        string korisnickoIme;
         string lozinka;
+    public:
+        Korisnik(string i, string p, bool kilip, string broj, string username, string password){
+            ime=i;
+            prezime=p;
+            kupacIliProd=kilip;
+            brojTelefona=broj;
+            korisnickoIme=username;
+            lozinka=password;
+        }
 };
 
 #endif // KORISNIK_HPP_INCLUDED

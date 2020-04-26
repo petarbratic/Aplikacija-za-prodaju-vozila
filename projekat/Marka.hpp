@@ -3,10 +3,15 @@
 
 class Marka{
     private:
-        /// ok je, samo dodaj nazivMarke:
         string nazivMarke;
         int godOsnivanja;
-        string zemlja; // primer: bmw, audi, merc - nemacka, fiat, alfa, ferrari - italija
+        string zemljaOdakleJe;
+    public:
+        Marka (string n, int g, string z){
+            nazivMarke=n;
+            godOsnivanja=g;
+            zemljaOdakleJe=z;
+        }
 };
 
 #endif // MARKA_HPP_INCLUDED

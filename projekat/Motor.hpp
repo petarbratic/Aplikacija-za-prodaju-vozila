@@ -7,7 +7,14 @@ class Motor{
         int snaga;
         int zapremina;
         int kilometraza;
-        Gorivo gorivo; /// sta si mislio pod ovim poljem?
+        Gorivo gorivo;
+    public:
+        Motor (int power, int cc, int vracana, Gorivo napitak){
+            snaga=power;
+            zapremina=cc;
+            kilometraza=vracana;
+            gorivo=napitak;
+        }
 };
 
 #endif // MOTOR_HPP_INCLUDED

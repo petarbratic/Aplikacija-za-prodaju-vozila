@@ -5,11 +5,16 @@ enum Materijal {CELIK, ALUMINIJUM, KARBON};
 enum Karoserija {LIMUZINA, KARAVAN, HECBEK, SUV};
 class Skoljka{
     private:
-        string boja; /// ovo je ok
+        string boja;
         Karoserija karoserija;
-        ///string karoserija; // primer: limuzina (sedan), karavan, hecbek, SUV
+        // primer: limuzina (sedan), karavan, hecbek, SUV
         Materijal materijal;
-
+    public:
+        Skoljka (string b, Karoserija kar, Materijal m){
+            boja=b;
+            karoserija=kar;
+            materijal=m;
+        }
 };
 
 #endif // SKOLJKA_HPP_INCLUDED
