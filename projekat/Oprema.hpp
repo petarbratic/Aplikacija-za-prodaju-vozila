@@ -6,6 +6,11 @@ protected:
     /// protected cemo isto naknadno objasniti
     bool klima;
     bool navigacija;
+public:
+    Oprema (bool k, bool n){
+        klima=k;
+        navigacija=n;
+    }
 
 };
 
