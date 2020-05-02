@@ -26,13 +26,13 @@ class Vozilo{
                 int VdoKojeGodine, string Vkategorija, string VregistarskaOznaka,
                 string VnazivMarke, int VgodinaOsnivanja, string VzemljaOdakleJe,
                 VrstaMenjaca Vvrsta, int VbrojStepenaPrenosa):
-                Korisnik (Vime, Vprezime, VkupaciliProd, VbrojTelefona, VkorisnickoIme, Vlozinka),
-                Motor (Vsnaga, Vzapremina, Vkilometraza, Vgorivo),
-                MestoProdaje (Vdrzava, Vokrug, Vgrad),
-                Skoljka (Vboja, Vkaroserija, Vmaterijal),
-                Registracija (VdoKojeGodine, Vkategorija, VregistarskaOznaka),
-                Marka (VnazivMarke, VgodinaOsnivanja, VzemljaOdakleJe),
-                Menjac (Vvrsta, VbrojStepenaPrenosa)
+                prodavac (Vime, Vprezime, VkupaciliProd, VbrojTelefona, VkorisnickoIme, Vlozinka),
+                motor (Vsnaga, Vzapremina, Vkilometraza, Vgorivo),
+                mestoprodaje (Vdrzava, Vokrug, Vgrad),
+                skoljka (Vboja, Vkaroserija, Vmaterijal),
+                registracija (VdoKojeGodine, Vkategorija, VregistarskaOznaka),
+                marka (VnazivMarke, VgodinaOsnivanja, VzemljaOdakleJe),
+                menjac (Vvrsta, VbrojStepenaPrenosa)
                 {}
 }
 
