@@ -45,6 +45,16 @@ class OpremaZaAuto: public Oprema{
             }
             return false;
         }
+        void ispisiOpremaZaAuto (){
+            ispisiOprema();
+            std::cout << servoVolan << std::endl;
+            std::cout << tempomat << std::endl;
+            std::cout << svetlaZaMaglu << std::endl;
+            std::cout <<parkingSenzori << std::endl;
+            std::cout <<kuka << std::endl;
+            std::cout << dpf << std::endl;
+            std::cout << masazaSedista << std::endl;
+        }
 };
 
 #endif // OPREMAZAAUTO_HPP_INCLUDED

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1588690607 source:c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\main.cpp
+1588703525 source:c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\main.cpp
 	<iostream>
 	<fstream>
 	"Korisnik.hpp"
@@ -14,22 +14,22 @@
 	"Motor.hpp"
 	"Automobil.hpp"
 
-1588689271 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\korisnik.hpp
+1588702147 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\korisnik.hpp
 	<fstream>
 	<string.h>
 
 1588690040 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\mestoprodaje.hpp
 
-1588668504 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\kamion.hpp
-	"OpremaZaKamion.hpp"
+1588702860 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\kamion.hpp
 	"Vozilo.hpp"
+	"OpremaZaKamion.hpp"
 
-1588322632 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\opremazakamion.hpp
+1588700670 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\opremazakamion.hpp
 	"Oprema.hpp"
 
-1588319395 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\oprema.hpp
+1588700293 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\oprema.hpp
 
-1588673646 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\vozilo.hpp
+1588702846 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\vozilo.hpp
 	<fstream>
 	"Korisnik.hpp"
 	"Motor.hpp"
@@ -39,20 +39,20 @@
 	"Marka.hpp"
 	"Menjac.hpp"
 
-1588322292 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\motor.hpp
+1588699079 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\motor.hpp
 
-1588668003 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\skoljka.hpp
+1588691025 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\skoljka.hpp
 
-1588668011 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\registracija.hpp
+1588690815 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\registracija.hpp
 
 1588690599 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\marka.hpp
 
 1588690447 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\menjac.hpp
 
-1588322528 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\opremazaauto.hpp
+1588700338 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\opremazaauto.hpp
 	"Oprema.hpp"
 
-1588322594 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\automobil.hpp
+1588703525 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\automobil.hpp
 	"Vozilo.hpp"
 	"OpremaZaAuto.hpp"
 

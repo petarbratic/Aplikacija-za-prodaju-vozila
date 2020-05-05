@@ -16,6 +16,13 @@ class OpremaZaKamion: public Oprema{
             mikrotalasna=pecnica;
             retarder=ret;
         }
+        void ispisiOpremaZaKamion (){
+            ispisiOprema();
+            std::cout << spavacaKabina << std::endl;
+            std::cout << televizor << std::endl;
+            std::cout << mikrotalasna << std::endl;
+            std::cout <<retarder<< std::endl;
+        }
 };
 
 #endif // OPREMAZAKAMION_HPP_INCLUDED

@@ -46,6 +46,14 @@ class Korisnik{
                     fajl.close();
 
 }
+        void ispisiKorisnik (){
+            std::cout << ime << std::endl;
+            std::cout << prezime << std::endl;
+            std::cout << kupacIliProd << std::endl;
+            std::cout << brojTelefona << std::endl;
+            std::cout << korisnickoIme << std::endl;
+            std::cout << lozinka << std::endl;
+        }
 };
 
 #endif // KORISNIK_HPP_INCLUDED

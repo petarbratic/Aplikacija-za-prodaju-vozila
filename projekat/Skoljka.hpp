@@ -21,6 +21,29 @@ class Skoljka{
             }
             return false;
         }
+        void ispisiSkoljka (){
+            std::cout << boja << std::endl;
+            switch (materijal){
+                case 0: {std::cout << "CELIK" << std::endl;
+                        break;}
+                case 1: {std::cout << "ALUMINIJUM" << std::endl;
+                        break;}
+                case 2: {std::cout << "KARBON" << std::endl;
+                        break;}
+            }
+            switch (karoserija){
+                case 0: {std::cout << "LIMUZINA" << std::endl;
+                        break;}
+                case 1: {std::cout << "KARAVAN" << std::endl;
+                        break;}
+                case 2: {std::cout << "HECBEK" << std::endl;
+                        break;}
+                case 3: {std::cout << "SUV" << std::endl;
+                        break;}
+                case 4: {std::cout << "KABRIOLET" << std::endl;
+                        break;}
+            }
+        }
 };
 
 #endif // SKOLJKA_HPP_INCLUDED

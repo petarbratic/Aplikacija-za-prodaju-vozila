@@ -23,6 +23,23 @@ class Motor{
             }
             return false;
         }
+        void ispisiMotor (){
+            std::cout << snaga << std::endl;
+            std::cout << zapremina << std::endl;
+            std::cout << kilometraza << std::endl;
+            switch (gorivo){
+                case 0: {std::cout << "BENZIN" << std::endl;
+                        break;}
+                case 1: {std::cout << "DIZEL" << std::endl;
+                        break;}
+                case 2: {std::cout << "BENZINIGAS" << std::endl;
+                        break;}
+                case 3: {std::cout << "STRUJA" << std::endl;
+                        break;}
+                case 4: {std::cout << "HIBRID" << std::endl;
+                        break;}
+            }
+        }
 };
 
 #endif // MOTOR_HPP_INCLUDED

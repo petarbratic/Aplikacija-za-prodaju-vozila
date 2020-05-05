@@ -34,6 +34,15 @@ class Vozilo{
                 marka (VnazivMarke, VgodinaOsnivanja, VzemljaOdakleJe),
                 menjac (Vvrsta, VbrojStepenaPrenosa)
                 {}
+        void ispisiVozilo (){
+            prodavac.ispisiKorisnik();
+            motor.ispisiMotor();
+            mestoprodaje.ispisiMestoProdaje();
+            skoljka.ispisiSkoljka();
+            registracija.ispisiRegistracija();
+            marka.ispisiMarka();
+            menjac.ispisiMenjac();
+        }
 
 
 };

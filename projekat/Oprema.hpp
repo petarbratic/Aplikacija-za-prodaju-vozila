@@ -11,6 +11,10 @@ public:
         klima=k;
         navigacija=n;
     }
+    void ispisiOprema (){
+        std::cout << klima << std::endl;
+        std::cout << navigacija << std::endl;
+    }
 
 };
 

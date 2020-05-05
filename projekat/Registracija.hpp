@@ -12,6 +12,11 @@ class Registracija{
             kategorija=kat;
             registarskaOznaka=ozn;
         }
+        void ispisiRegistracija (){
+            std::cout << doKojeGodine << std::endl;
+            std::cout << kategorija << std::endl;
+            std::cout << registarskaOznaka << std::endl;
+        }
 };
 
 #endif // REGISTRACIJA_HPP_INCLUDED
