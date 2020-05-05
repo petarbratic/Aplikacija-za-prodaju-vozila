@@ -4,10 +4,10 @@
 class Registracija{
     private:
         int doKojeGodine; //do koje godine je registrovan
-        string kategorija; // a, b, c, d, f
-        string registarskaOznaka; // primer: NS 317 TG
+        std::string kategorija; // a, b, c, d, f
+        std::string registarskaOznaka; // primer: NS 317 TG
     public:
-        Registracija (int dkg, string kat, string ozn){
+        Registracija (int dkg, std::string kat, std::string ozn){
             doKojeGodine=dkg;
             kategorija=kat;
             registarskaOznaka=ozn;

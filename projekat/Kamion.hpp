@@ -4,7 +4,7 @@
 #include "OpremaZaKamion.hpp"
 #include "Vozilo.hpp"
 
-class Kamion:public Vozilo{
+class Kamion : public Vozilo{
 private:
     OpremaZaKamion opremazakamion;
 };

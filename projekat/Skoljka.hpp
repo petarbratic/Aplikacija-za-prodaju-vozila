@@ -2,14 +2,14 @@
 #define SKOLJKA_HPP_INCLUDED
 
 enum Materijal {CELIK, ALUMINIJUM, KARBON};
-enum Karoserija {LIMUZINA, KARAVAN, HECBEK, SUV, KARBIOLET};
+enum Karoserija {LIMUZINA, KARAVAN, HECBEK, SUV, KABRIOLET};
 class Skoljka{
     private:
-        string boja;
+        std::string boja;
         Karoserija karoserija;
         Materijal materijal;
     public:
-        Skoljka (string b, Karoserija kar, Materijal m){
+        Skoljka (std::string b, Karoserija kar, Materijal m){
             boja=b;
             karoserija=kar;
             materijal=m;

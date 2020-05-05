@@ -1,6 +1,6 @@
 #ifndef VOZILO_HPP_INCLUDED
 #define VOZILO_HPP_INCLUDED
-
+#include <fstream>
 #include "Korisnik.hpp"
 #include "Motor.hpp"
 #include "MestoProdaje.hpp"
@@ -14,19 +14,19 @@ class Vozilo{
         Korisnik prodavac;
         Motor motor;
         MestoProdaje mestoprodaje;
-        Skolja skoljka;
+        Skoljka skoljka;
         Registracija registracija;
         Marka marka;
         Menjac menjac;
     public:
-        Vozilo (string Vime, string Vprezime, bool VkupacIliProd, string VbrojTelefona, string VkorisnickoIme, string Vlozinka,
+        Vozilo (std::string Vime, std::string Vprezime, bool VkupacIliProd, std::string VbrojTelefona, std::string VkorisnickoIme, std::string Vlozinka,
                 int Vsnaga, int Vzapremina, int Vkilometraza, Gorivo Vgorivo,
-                string Vdrzava, string Vokrug, string Vgrad,
-                string Vboja, Karoserija Vkaroserija, Materijal Vmaterijal,
-                int VdoKojeGodine, string Vkategorija, string VregistarskaOznaka,
-                string VnazivMarke, int VgodinaOsnivanja, string VzemljaOdakleJe,
+                std::string Vdrzava, std::string Vokrug, std::string Vgrad,
+                std::string Vboja, Karoserija Vkaroserija, Materijal Vmaterijal,
+                int VdoKojeGodine, std::string Vkategorija, std::string VregistarskaOznaka,
+                std::string VnazivMarke, int VgodinaOsnivanja, std::string VzemljaOdakleJe,
                 VrstaMenjaca Vvrsta, int VbrojStepenaPrenosa):
-                prodavac (Vime, Vprezime, VkupaciliProd, VbrojTelefona, VkorisnickoIme, Vlozinka),
+                prodavac (Vime, Vprezime, VkupacIliProd, VbrojTelefona, VkorisnickoIme, Vlozinka),
                 motor (Vsnaga, Vzapremina, Vkilometraza, Vgorivo),
                 mestoprodaje (Vdrzava, Vokrug, Vgrad),
                 skoljka (Vboja, Vkaroserija, Vmaterijal),
@@ -34,7 +34,9 @@ class Vozilo{
                 marka (VnazivMarke, VgodinaOsnivanja, VzemljaOdakleJe),
                 menjac (Vvrsta, VbrojStepenaPrenosa)
                 {}
-}
+
+
+};
 
 
 #endif // VOZILO_HPP_INCLUDED

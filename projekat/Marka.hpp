@@ -3,14 +3,19 @@
 
 class Marka{
     private:
-        string nazivMarke;
+        std::string nazivMarke;
         int godOsnivanja;
-        string zemljaOdakleJe;
+        std::string zemljaOdakleJe;
     public:
-        Marka (string n, int g, string z){
+        Marka (std::string n, int g, std::string z){
             nazivMarke=n;
             godOsnivanja=g;
             zemljaOdakleJe=z;
+        }
+        void ispisiMarka (){
+            std::cout << nazivMarke << std::endl;
+            std::cout << godOsnivanja << std::endl;
+            std::cout << zemljaOdakleJe << std::endl;
         }
 };
 

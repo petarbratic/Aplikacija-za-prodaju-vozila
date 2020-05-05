@@ -3,14 +3,19 @@
 
 class MestoProdaje{
     private:
-        string drzava;
-        string okrug;
-        string grad;
+        std::string drzava;
+        std::string okrug;
+        std::string grad;
     public:
-        MestoProdaje (string dr, string okr, string gr){
+        MestoProdaje (std::string dr, std::string okr, std::string gr){
             drzava=dr;
             okrug=okr;
             grad=gr;
+        }
+        void ispisiMestoProdaje (){
+            std::cout << drzava << std::endl;
+            std::cout << okrug << std::endl;
+            std::cout << grad << std::endl;
         }
 };
 

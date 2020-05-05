@@ -45,6 +45,7 @@
 		<Unit filename="Registracija.hpp" />
 		<Unit filename="Skoljka.hpp" />
 		<Unit filename="Vozilo.hpp" />
+		<Unit filename="fajlvozilo.txt" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
