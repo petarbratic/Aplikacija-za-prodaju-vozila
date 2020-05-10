@@ -1,6 +1,8 @@
 #ifndef SKOLJKA_HPP_INCLUDED
 #define SKOLJKA_HPP_INCLUDED
-
+#include <fstream>
+#include <string>
+#include <iostream>
 enum Materijal {CELIK, ALUMINIJUM, KARBON};
 enum Karoserija {LIMUZINA, KARAVAN, HECBEK, SUV, KABRIOLET};
 class Skoljka{
@@ -44,6 +46,7 @@ class Skoljka{
                         break;}
             }
         }
+        friend std::ostream& operator << (std::ostream& izlaz, const Skoljka& skolj);
 };
 
 #endif // SKOLJKA_HPP_INCLUDED

@@ -1,6 +1,8 @@
 #ifndef MOTOR_HPP_INCLUDED
 #define MOTOR_HPP_INCLUDED
-
+#include <fstream>
+#include <string>
+#include <iostream>
 enum Gorivo {BENZIN, DIZEL, BENZINIGAS, STRUJA, HIBRID};
 class Motor{
     private:
@@ -39,7 +41,10 @@ class Motor{
                 case 4: {std::cout << "HIBRID" << std::endl;
                         break;}
             }
-        }
+
+
+}
+    friend std::ostream& operator<<(std::ostream& izlaz, const Motor& engine);
 };
 
 #endif // MOTOR_HPP_INCLUDED

@@ -18,6 +18,7 @@ class Vozilo{
         Registracija registracija;
         Marka marka;
         Menjac menjac;
+        static int brojVozila;
     public:
         Vozilo (std::string Vime, std::string Vprezime, bool VkupacIliProd, std::string VbrojTelefona, std::string VkorisnickoIme, std::string Vlozinka,
                 int Vsnaga, int Vzapremina, int Vkilometraza, Gorivo Vgorivo,
@@ -33,7 +34,7 @@ class Vozilo{
                 registracija (VdoKojeGodine, Vkategorija, VregistarskaOznaka),
                 marka (VnazivMarke, VgodinaOsnivanja, VzemljaOdakleJe),
                 menjac (Vvrsta, VbrojStepenaPrenosa)
-                {}
+                {brojVozila++;}
         void ispisiVozilo (){
             prodavac.ispisiKorisnik();
             motor.ispisiMotor();
@@ -44,8 +45,11 @@ class Vozilo{
             menjac.ispisiMenjac();
         }
 
-
+        void ispisiBrojVozila(){
+            std::cout << brojVozila <<std::endl;
+        }
 };
+
 
 
 #endif // VOZILO_HPP_INCLUDED

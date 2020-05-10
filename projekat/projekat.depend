@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1588703525 source:c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\main.cpp
+1589111846 source:c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\main.cpp
 	<iostream>
 	<fstream>
 	"Korisnik.hpp"
@@ -29,7 +29,7 @@
 
 1588700293 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\oprema.hpp
 
-1588702846 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\vozilo.hpp
+1589111923 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\vozilo.hpp
 	<fstream>
 	"Korisnik.hpp"
 	"Motor.hpp"
