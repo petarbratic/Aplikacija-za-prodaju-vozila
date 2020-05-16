@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Automobil.hpp" />
+		<Unit filename="IzlogAutomobila.hpp" />
 		<Unit filename="Kamion.hpp" />
 		<Unit filename="Korisnik.hpp" />
 		<Unit filename="Marka.hpp" />

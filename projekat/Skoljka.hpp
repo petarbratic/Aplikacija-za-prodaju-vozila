@@ -24,25 +24,27 @@ class Skoljka{
             return false;
         }
         void ispisiSkoljka (){
-            std::cout << boja << std::endl;
+            std::cout <<"Boja vozila: "<< boja << std::endl;
+            std::cout <<"Materijal od kog je napravljeno vozilo je: ";
             switch (materijal){
-                case 0: {std::cout << "CELIK" << std::endl;
+                case 0: {std::cout << "celik" << std::endl;
                         break;}
-                case 1: {std::cout << "ALUMINIJUM" << std::endl;
+                case 1: {std::cout << "aluminijum" << std::endl;
                         break;}
-                case 2: {std::cout << "KARBON" << std::endl;
+                case 2: {std::cout << "karbon" << std::endl;
                         break;}
             }
+            std::cout <<"Karoserija vozila: ";
             switch (karoserija){
-                case 0: {std::cout << "LIMUZINA" << std::endl;
+                case 0: {std::cout << "limuzina" << std::endl;
                         break;}
-                case 1: {std::cout << "KARAVAN" << std::endl;
+                case 1: {std::cout << "karavan" << std::endl;
                         break;}
-                case 2: {std::cout << "HECBEK" << std::endl;
+                case 2: {std::cout << "hecbek" << std::endl;
                         break;}
                 case 3: {std::cout << "SUV" << std::endl;
                         break;}
-                case 4: {std::cout << "KABRIOLET" << std::endl;
+                case 4: {std::cout << "kabriolet" << std::endl;
                         break;}
             }
         }

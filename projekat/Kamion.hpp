@@ -8,7 +8,7 @@ class Kamion : public Vozilo{
     private:
         OpremaZaKamion opremazakamion;
     public:
-        Kamion (std::string Vime, std::string Vprezime, bool VkupacIliProd, std::string VbrojTelefona, std::string VkorisnickoIme, std::string Vlozinka,
+        Kamion (int Vid, std::string Vime, std::string Vprezime, bool VkupacIliProd, std::string VbrojTelefona, std::string VkorisnickoIme, std::string Vlozinka,
                 int Vsnaga, int Vzapremina, int Vkilometraza, Gorivo Vgorivo,
                 std::string Vdrzava, std::string Vokrug, std::string Vgrad,
                 std::string Vboja, Karoserija Vkaroserija, Materijal Vmaterijal,
@@ -16,7 +16,7 @@ class Kamion : public Vozilo{
                 std::string VnazivMarke, int VgodinaOsnivanja, std::string VzemljaOdakleJe,
                 VrstaMenjaca Vvrsta, int VbrojStepenaPrenosa, bool Kamionklima, bool KamionNavi,
                 bool spavanje, bool tv, bool pecnica, bool ret):
-                Vozilo (Vime, Vprezime, VkupacIliProd, VbrojTelefona, VkorisnickoIme, Vlozinka,
+                Vozilo (Vid, Vime, Vprezime, VkupacIliProd, VbrojTelefona, VkorisnickoIme, Vlozinka,
                         Vsnaga, Vzapremina, Vkilometraza, Vgorivo,
                         Vdrzava, Vokrug, Vgrad,
                         Vboja, Vkaroserija, Vmaterijal,
@@ -25,10 +25,11 @@ class Kamion : public Vozilo{
                         Vvrsta, VbrojStepenaPrenosa),
                 opremazakamion (Kamionklima, KamionNavi, spavanje, tv, pecnica, ret)
                 {}
-        void ispisiKamion (){
+        void ispisiVozilo (){
             ispisiVozilo();
             opremazakamion.ispisiOpremaZaKamion();
         }
+
 };
 
 #endif // KAMION_HPP_INCLUDED

@@ -3,6 +3,7 @@
 
 #include <fstream>
 #include <string.h>
+using namespace std;
 class Korisnik{
     private:
         std::string ime;
@@ -47,12 +48,18 @@ class Korisnik{
 
 }
         void ispisiKorisnik (){
-            std::cout << ime << std::endl;
-            std::cout << prezime << std::endl;
-            std::cout << kupacIliProd << std::endl;
-            std::cout << brojTelefona << std::endl;
-            std::cout << korisnickoIme << std::endl;
-            std::cout << lozinka << std::endl;
+            std::cout<<"Ime korisnika: " << ime << std::endl;
+            std::cout <<"Prezime korisnika: "<< prezime << std::endl;
+            switch (kupacIliProd){
+                case 0:
+                    std::cout << "Kupac" << std::endl;break;
+                case 1:
+                    std::cout << "Prodavac" << std::endl;
+
+            }
+            std::cout <<"Broj telefona korisnika: "<< brojTelefona << std::endl;
+            std::cout <<"Korisnicko ime: "<< korisnickoIme << std::endl;
+            //std::cout <<"Lozinka: "<< lozinka << std::endl;
         }
 };
 

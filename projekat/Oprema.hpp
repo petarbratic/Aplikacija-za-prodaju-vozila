@@ -12,8 +12,14 @@ public:
         navigacija=n;
     }
     void ispisiOprema (){
-        std::cout << klima << std::endl;
-        std::cout << navigacija << std::endl;
+        if(klima)
+                std::cout <<"Klima: "<< "da" << std::endl;
+            else
+                std::cout <<"Klima: "<< "ne" << std::endl;
+        if(navigacija)
+                std::cout <<"Navigacija: "<< "da" << std::endl;
+            else
+                std::cout <<"Navigacija: "<< "ne" << std::endl;
     }
 
 };

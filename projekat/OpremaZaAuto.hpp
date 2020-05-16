@@ -47,14 +47,36 @@ class OpremaZaAuto: public Oprema{
         }
         void ispisiOpremaZaAuto (){
             ispisiOprema();
-            std::cout << servoVolan << std::endl;
-            std::cout << tempomat << std::endl;
-            std::cout << svetlaZaMaglu << std::endl;
-            std::cout <<parkingSenzori << std::endl;
-            std::cout <<kuka << std::endl;
-            std::cout << dpf << std::endl;
-            std::cout << masazaSedista << std::endl;
-        }
+
+            if(servoVolan)
+                std::cout <<"Servo volan: "<< "da" << std::endl;
+            else
+                std::cout <<"Servo volan: "<< "ne" << std::endl;
+            if(tempomat)
+                std::cout <<"Tempomat: "<< "da" << std::endl;
+            else
+                std::cout <<"Tempomat: "<< "ne" << std::endl;
+            if(svetlaZaMaglu)
+                std::cout <<"Svetla za maglu: "<< "da" << std::endl;
+            else
+                std::cout <<"Svetla za maglu: "<< "ne" << std::endl;
+            if(parkingSenzori)
+                std::cout <<"Parking senzori: "<< "da" << std::endl;
+            else
+                std::cout <<"Parking senzori: "<< "ne" << std::endl;
+            if(kuka)
+                std::cout <<"Kuka: "<< "da" << std::endl;
+            else
+                std::cout <<"Kuka: "<< "ne" << std::endl;
+            if(dpf)
+                std::cout <<"DPF: "<< "da" << std::endl;
+            else
+                std::cout <<"DPF: "<< "ne" << std::endl;
+            if(masazaSedista)
+                std::cout <<"Masaza sedista: "<< "da" << std::endl;
+            else
+                std::cout <<"Masaza sedista: "<< "ne" << std::endl<<endl;
+            }
 };
 
 #endif // OPREMAZAAUTO_HPP_INCLUDED

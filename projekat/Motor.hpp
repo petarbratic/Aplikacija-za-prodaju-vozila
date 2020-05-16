@@ -26,19 +26,20 @@ class Motor{
             return false;
         }
         void ispisiMotor (){
-            std::cout << snaga << std::endl;
-            std::cout << zapremina << std::endl;
-            std::cout << kilometraza << std::endl;
+            std::cout <<"Snaga motora je: "<< snaga <<" ks"<< std::endl;
+            std::cout <<"Zapremina motora je: "<< zapremina <<" cc"<< std::endl;
+            std::cout <<"Vozilo je preslo: "<< kilometraza <<" km"<< std::endl;
+            cout<< "Vozilo ide na: ";
             switch (gorivo){
-                case 0: {std::cout << "BENZIN" << std::endl;
+                case 0: {std::cout << "benzin" << std::endl;
                         break;}
-                case 1: {std::cout << "DIZEL" << std::endl;
+                case 1: {std::cout << "dizel" << std::endl;
                         break;}
-                case 2: {std::cout << "BENZINIGAS" << std::endl;
+                case 2: {std::cout << "plin" << std::endl;
                         break;}
-                case 3: {std::cout << "STRUJA" << std::endl;
+                case 3: {std::cout << "struju" << std::endl;
                         break;}
-                case 4: {std::cout << "HIBRID" << std::endl;
+                case 4: {std::cout << "struju i benzin" << std::endl;
                         break;}
             }
 

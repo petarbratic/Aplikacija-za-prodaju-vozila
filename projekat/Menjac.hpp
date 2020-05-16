@@ -12,11 +12,12 @@ class Menjac{
             brojStepenaPrenosa=brojst;
         }
         void ispisiMenjac (){
+            cout<<"Menjac: ";
             if (vrsta==MANUELNI){
                 std::cout << "MANUELNI" << std::endl;}
             if (vrsta==AUTOMATSKI){
                 std::cout << "AUTOMATSKI" << std::endl;}
-            std::cout << brojStepenaPrenosa << std::endl;
+            std::cout <<"Broj stepeni prenosa: "<< brojStepenaPrenosa << std::endl;
         }
 };
 

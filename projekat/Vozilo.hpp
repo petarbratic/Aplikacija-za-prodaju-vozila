@@ -11,6 +11,7 @@
 
 class Vozilo{
     protected:
+        int id;
         Korisnik prodavac;
         Motor motor;
         MestoProdaje mestoprodaje;
@@ -20,7 +21,7 @@ class Vozilo{
         Menjac menjac;
         static int brojVozila;
     public:
-        Vozilo (std::string Vime, std::string Vprezime, bool VkupacIliProd, std::string VbrojTelefona, std::string VkorisnickoIme, std::string Vlozinka,
+        Vozilo (int Vid, std::string Vime, std::string Vprezime, bool VkupacIliProd, std::string VbrojTelefona, std::string VkorisnickoIme, std::string Vlozinka,
                 int Vsnaga, int Vzapremina, int Vkilometraza, Gorivo Vgorivo,
                 std::string Vdrzava, std::string Vokrug, std::string Vgrad,
                 std::string Vboja, Karoserija Vkaroserija, Materijal Vmaterijal,
@@ -34,7 +35,8 @@ class Vozilo{
                 registracija (VdoKojeGodine, Vkategorija, VregistarskaOznaka),
                 marka (VnazivMarke, VgodinaOsnivanja, VzemljaOdakleJe),
                 menjac (Vvrsta, VbrojStepenaPrenosa)
-                {brojVozila++;}
+                {brojVozila++;
+                id=Vid;}
         void ispisiVozilo (){
             prodavac.ispisiKorisnik();
             motor.ispisiMotor();
@@ -48,6 +50,10 @@ class Vozilo{
         void ispisiBrojVozila(){
             std::cout << brojVozila <<std::endl;
         }
+        ~Vozilo(){
+            brojVozila--;
+        }
+
 };
 
 

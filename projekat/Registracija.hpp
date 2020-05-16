@@ -13,9 +13,9 @@ class Registracija{
             registarskaOznaka=ozn;
         }
         void ispisiRegistracija (){
-            std::cout << doKojeGodine << std::endl;
-            std::cout << kategorija << std::endl;
-            std::cout << registarskaOznaka << std::endl;
+            std::cout <<"Registrovan do: "<< doKojeGodine << std::endl;
+            std::cout <<"Kategorija: "<< kategorija << std::endl;
+            std::cout <<"Registarska oznaka: "<< registarskaOznaka << std::endl;
         }
 };
 

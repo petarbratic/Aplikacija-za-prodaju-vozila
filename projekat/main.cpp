@@ -11,16 +11,17 @@
 #include "Skoljka.hpp"
 #include "Motor.hpp"
 #include "Automobil.hpp"
-
+#include "IzlogAutomobila.hpp"
 using namespace std;
 
 int Vozilo::brojVozila=0;
 
 ostream& operator<<(ostream& izlaz, const MestoProdaje& mp){
     izlaz<<"Mesto prodaje - ispis"<<endl;
-    cout<<"Drzava: "<< mp.drzava<<endl;
-    cout<<"Okrug: "<< mp.okrug<<endl;
-    cout<<"Grad: "<< mp.grad<<endl<<endl;
+    izlaz<<"Drzava: "<< mp.drzava<<endl;
+    izlaz<<"Okrug: "<< mp.okrug<<endl;
+    izlaz<<"Grad: "<< mp.grad<<endl<<endl;
+    return izlaz;
 }
 
 ostream& operator<<(ostream& izlaz, const Motor& engine){
@@ -40,6 +41,7 @@ ostream& operator<<(ostream& izlaz, const Motor& engine){
                 case 4: {cout << "HIBRID" << endl;
                         break;}
             }
+            return izlaz;
 }
 
 ostream& operator << (ostream& izlaz, const Skoljka& skolj){
@@ -65,6 +67,7 @@ ostream& operator << (ostream& izlaz, const Skoljka& skolj){
                 case 4: {std::cout << "KABRIOLET" << std::endl;
                         break;}
             }
+            return izlaz;
 }
 
 
@@ -74,7 +77,7 @@ int main()
     /* predlog funkcionalnosti
     1. logovanje, registrovanje korisnika i slanje pitanja prodavcu u vezi sa nekim vozilom
     2. kada se korisnik uloguje prikazuju mu se sva vozila koja su u ponudi, on moze da izabere da sacuva vozilo,
-     ako oznaci da je kupio neko vozilo od tih saèuvanih ispisuje se ponuda na primer pneumatika, ulja, felni, ratkapni
+     ako oznaci da je kupio neko vozilo od tih sacuvanih ispisuje se ponuda na primer pneumatika, ulja, felni, ratkapni
     */
 
     /* string nasFajl = "korisnici.txt";
@@ -92,8 +95,8 @@ int main()
 
     MestoProdaje mesto1("Srbija", "Toplicki", "Arandjelovac");
     // mesto1.ispisiMestoProdaje();
-    cout<<mesto1;
-    cout << "\n"<<endl;
+    // cout<<mesto1;
+    // cout << "\n"<<endl;
 
     /* Menjac vm1 (AUTOMATSKI, 5);
     vm1.ispisiMenjac();
@@ -107,15 +110,15 @@ int main()
     r1.ispisiRegistracija();
     cout << "\n"<<endl; */
 
-    Skoljka sk1 ("crvena", LIMUZINA, CELIK);
+    // Skoljka sk1 ("crvena", LIMUZINA, CELIK);
     // sk1.ispisiSkoljka();
-    cout<<sk1;
-    cout << "\n"<<endl;
+    // cout<<sk1;
+    // cout << "\n"<<endl;
 
-    Motor motor1 (101, 1698, 123000, DIZEL);
+    // Motor motor1 (101, 1698, 123000, DIZEL);
     // motor1.ispisiMotor();
-    cout<<motor1;
-    cout << "\n"<<endl;
+    // cout<<motor1;
+    // cout << "\n"<<endl;
 
     /* OpremaZaAuto o1(true,false,true,false,true,false,true,false,false);
     o1.ispisiOpremaZaAuto();
@@ -125,29 +128,48 @@ int main()
     ok1.ispisiOpremaZaKamion();
     cout << "\n"<<endl; */
 
-    Kamion kamion1 ("Nenad", "Lukic", true, "063521132", "ekstraneskho", "nena",
+    /* Kamion kamion1 ("Nenad", "Lukic", true, "063521132", "ekstraneskho", "nena",
                730, 13000, 999324, DIZEL, "Srbija", "Juznobacki",
                "Veternik", "siva", KARAVAN, CELIK, 2021, "c", "NS123AB", "Scania",1891,
                "Nemacka", AUTOMATSKI, 12, true, true, true, true, false, true);
     // kamion1.ispisiKamion();
-    cout << "\n"<<endl;
+    cout << "\n"<<endl;  */
 
-    Automobil auto1 ("Nenad", "Lukic", true, "06734123", "ekstrajugo", "jugu",
+     Automobil auto1 (1,"Nenad", "Lukic", true, "06734123", "ekstrajugo", "jugu",
                      55, 900, 20345, BENZINIGAS, "Srbija", "Severnobacki", "Apatin",
                      "crvena", HECBEK, CELIK, 2021, "b", "NS544RR", "Zastava", 1945,
                      "Jugoslavija", MANUELNI, 4, false, false, false, false, true,
                      false, true, false, false);
     // auto1.ispisiAutomobil();
-    cout << "\n" <<endl;
+    // cout << "\n" <<endl;
 
-    Automobil auto2 ("Teodor", "Perunicic", true, "06754133", "teofeel", "teo123",
+    Automobil auto2 (2,"Teodor", "Perunicic", true, "06754133", "teofeel", "teo123",
                      93, 1988, 1026, DIZEL, "Srbija", "Severnobacki", "Apatin",
-                     "crvena", HECBEK, CELIK, 2021, "b", "NS544RR", "Zastava", 1945,
+                     "crvena", HECBEK, CELIK, 2021, "b", "NS544RR", "BMW", 1945,
                      "Jugoslavija", MANUELNI, 4, false, false, false, false, true,
                      false, true, false, false);
-    // auto2.ispisiAutomobil();
-    cout << "\n" <<endl;
 
-    auto2.ispisiBrojVozila();
+    // auto2.ispisiAutomobil();
+    // cout << "\n" <<endl;
+
+    // auto2.ispisiBrojVozila();
+
+    IzlogAutomobila ia(BEOGRAD);
+    ia.dodaj(&auto1);
+    ia.dodaj(&auto2);
+    ia.ispisiAutomobile();
+    ia.pretragaPoMarki("Zastava");
+    ia.izbaci(1);
+    ia.ispisiAutomobile();
+
+    Automobil auto3 (3,"Nikola", "Petric", true, "06355138", "hashim", "tachi",
+                     60, 2012, 1600, DIZEL, "Srbija", "Juznobacki", "Futog",
+                     "zelena", KARAVAN, KARBON, 2022, "b", "NS324NV", "Skoda", 1893,
+                     "Ceska", MANUELNI, 5, true, true, false, false, true,
+                     false, true, false, true);
+    auto3.ispisiAutomobil();
+
+
+
     return 0;
 }

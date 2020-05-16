@@ -16,7 +16,7 @@ class OpremaZaKamion: public Oprema{
             mikrotalasna=pecnica;
             retarder=ret;
         }
-        void ispisiOpremaZaKamion (){
+        virtual void ispisiOpremaZaKamion (){
             ispisiOprema();
             std::cout << spavacaKabina << std::endl;
             std::cout << televizor << std::endl;
