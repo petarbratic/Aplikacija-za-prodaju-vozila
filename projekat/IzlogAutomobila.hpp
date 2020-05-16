@@ -26,7 +26,7 @@ public:
         cout<<"Broj automobila na izlogu je: "<<automobili.size()<<endl;
         cout<<"Na njemu su u ponudi sledeci automobili: "<<endl<<endl;
         for(auto it=automobili.begin(); it<automobili.end(); it++){
-            (*it)->ispisiAutomobil();
+            (*it)->ispisi();
         }
     }
     // int kolikoJeAutomobila(){return automobili.size();}
@@ -44,7 +44,7 @@ public:
         for(auto it=automobili.begin(); it<automobili.end(); it++){
             x=((*it)->getmarka()).compare(mmarka);
             if (x==0){
-                (*it)->ispisiAutomobil();
+                (*it)->ispisi();
             }
 
         }

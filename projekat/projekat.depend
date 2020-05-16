@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1589652125 source:c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\main.cpp
+1589652613 source:c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\main.cpp
 	<iostream>
 	<fstream>
 	"Korisnik.hpp"
@@ -33,7 +33,7 @@
 
 1589652053 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\oprema.hpp
 
-1589652182 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\vozilo.hpp
+1589652613 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\vozilo.hpp
 	<fstream>
 	"Korisnik.hpp"
 	"Motor.hpp"
@@ -62,12 +62,12 @@
 1589652039 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\opremazaauto.hpp
 	"Oprema.hpp"
 
-1589652157 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\automobil.hpp
+1589652648 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\automobil.hpp
 	<vector>
 	"Vozilo.hpp"
 	"OpremaZaAuto.hpp"
 
-1589652209 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\izlogautomobila.hpp
+1589652623 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\izlogautomobila.hpp
 	"Automobil.hpp"
 	<vector>
 

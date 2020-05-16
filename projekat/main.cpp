@@ -167,7 +167,7 @@ int main()
                      "zelena", KARAVAN, KARBON, 2022, "b", "NS324NV", "Skoda", 1893,
                      "Ceska", MANUELNI, 5, true, true, false, false, true,
                      false, true, false, true);
-    auto3.ispisiAutomobil();
+    auto3.ispisi();
 
 
 

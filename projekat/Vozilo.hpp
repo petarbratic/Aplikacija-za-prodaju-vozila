@@ -37,7 +37,7 @@ class Vozilo{
                 menjac (Vvrsta, VbrojStepenaPrenosa)
                 {brojVozila++;
                 id=Vid;}
-        void ispisiVozilo (){
+        virtual void ispisi (){
             prodavac.ispisiKorisnik();
             motor.ispisiMotor();
             mestoprodaje.ispisiMestoProdaje();
