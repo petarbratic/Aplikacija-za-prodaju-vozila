@@ -11,7 +11,7 @@ public:
         klima=k;
         navigacija=n;
     }
-    void ispisiOprema (){
+    virtual void ispisi ()const{
         if(klima)
                 std::cout <<"Klima: "<< "da" << std::endl;
             else

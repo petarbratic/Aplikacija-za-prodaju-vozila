@@ -1,3 +1,5 @@
 Nikola,Petric,1,064423523,nikola123,1234
 Nenad,Lukic,0,065123543,ekstranesa,neskho
 Kosta,Konstantinovic,1,060567432,karatekosta,kostaprekomosta
+Kolja,Grujic,0,063233122,kolja,kolju
+Nikola,Pistalovic,1,555333,plitko,duboko

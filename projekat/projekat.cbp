@@ -32,7 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Arhiva.hpp" />
 		<Unit filename="Automobil.hpp" />
+		<Unit filename="Baza.hpp" />
+		<Unit filename="Izlog.hpp" />
 		<Unit filename="IzlogAutomobila.hpp" />
 		<Unit filename="Kamion.hpp" />
 		<Unit filename="Korisnik.hpp" />

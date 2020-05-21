@@ -25,9 +25,9 @@ class Kamion : public Vozilo{
                         Vvrsta, VbrojStepenaPrenosa),
                 opremazakamion (Kamionklima, KamionNavi, spavanje, tv, pecnica, ret)
                 {}
-        void ispisiVozilo (){
-            ispisiVozilo();
-            opremazakamion.ispisiOpremaZaKamion();
+        void ispisi ()const{
+            Vozilo::ispisi();
+            opremazakamion.ispisi();
         }
 
 };

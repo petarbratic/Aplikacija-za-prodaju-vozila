@@ -45,8 +45,8 @@ class OpremaZaAuto: public Oprema{
             }
             return false;
         }
-        void ispisiOpremaZaAuto (){
-            ispisiOprema();
+        void ispisi()const{
+            Oprema::ispisi();
 
             if(servoVolan)
                 std::cout <<"Servo volan: "<< "da" << std::endl;
@@ -73,7 +73,7 @@ class OpremaZaAuto: public Oprema{
             else
                 std::cout <<"DPF: "<< "ne" << std::endl;
             if(masazaSedista)
-                std::cout <<"Masaza sedista: "<< "da" << std::endl;
+                std::cout <<"Masaza sedista: "<< "da" << std::endl<<endl;
             else
                 std::cout <<"Masaza sedista: "<< "ne" << std::endl<<endl;
             }

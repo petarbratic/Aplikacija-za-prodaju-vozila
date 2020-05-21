@@ -16,13 +16,26 @@ class OpremaZaKamion: public Oprema{
             mikrotalasna=pecnica;
             retarder=ret;
         }
-        virtual void ispisiOpremaZaKamion (){
-            ispisiOprema();
-            std::cout << spavacaKabina << std::endl;
-            std::cout << televizor << std::endl;
-            std::cout << mikrotalasna << std::endl;
-            std::cout <<retarder<< std::endl;
-        }
+        void ispisi ()const{
+            Oprema::ispisi();
+
+            if(spavacaKabina)
+                std::cout <<"Spavaca kabina: "<< "da" << std::endl;
+            else
+                std::cout <<"Spavaca kabina: "<< "ne" << std::endl;
+            if(televizor)
+                std::cout <<"Televizor: "<< "da" << std::endl;
+            else
+                std::cout <<"Televizor: "<< "ne" << std::endl;
+            if(mikrotalasna)
+                std::cout <<"Mikrotalasna: "<< "da" << std::endl;
+            else
+                std::cout <<"Mikrotalasna: "<< "ne" << std::endl;
+            if(retarder)
+                std::cout <<"Retarder: "<< "da" << std::endl<<endl;
+            else
+                std::cout <<"Retarder: "<< "ne" << std::endl<<endl;
+            }
 };
 
 #endif // OPREMAZAKAMION_HPP_INCLUDED

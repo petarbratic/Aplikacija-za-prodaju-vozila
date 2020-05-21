@@ -25,7 +25,7 @@ class Motor{
             }
             return false;
         }
-        void ispisiMotor (){
+        void ispisiMotor ()const{
             std::cout <<"Snaga motora je: "<< snaga <<" ks"<< std::endl;
             std::cout <<"Zapremina motora je: "<< zapremina <<" cc"<< std::endl;
             std::cout <<"Vozilo je preslo: "<< kilometraza <<" km"<< std::endl;

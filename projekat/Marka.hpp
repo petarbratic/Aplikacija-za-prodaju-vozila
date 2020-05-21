@@ -13,7 +13,7 @@ class Marka{
             godOsnivanja=g;
             zemljaOdakleJe=z;
         }
-        void ispisiMarka (){
+        void ispisiMarka ()const{
             std::cout <<"Marka: "<< nazivMarke << std::endl;
             std::cout <<"Godina osnivanja: "<< godOsnivanja << std::endl;
             std::cout <<"Drzava proizvodnje: "<< zemljaOdakleJe << std::endl;

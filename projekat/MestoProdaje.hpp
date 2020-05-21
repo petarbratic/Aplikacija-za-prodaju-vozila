@@ -14,10 +14,10 @@ class MestoProdaje{
             okrug=okr;
             grad=gr;
         }
-        void ispisiMestoProdaje (){
+        void ispisiMestoProdaje ()const{
             std::cout <<"Vozilo se prodaje u: "<< drzava <<", "<<okrug<<" okrug, "<<grad<<std::endl;
         }
-        friend std::ostream& operator<<(std::ostream& izlaz, const MestoProdaje& mp);
+        friend std::ostream& operator<<(ostream& izlaz, const MestoProdaje& mp);
 
 };
 

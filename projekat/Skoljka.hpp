@@ -23,7 +23,7 @@ class Skoljka{
             }
             return false;
         }
-        void ispisiSkoljka (){
+        void ispisiSkoljka ()const{
             std::cout <<"Boja vozila: "<< boja << std::endl;
             std::cout <<"Materijal od kog je napravljeno vozilo je: ";
             switch (materijal){

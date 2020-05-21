@@ -12,7 +12,7 @@ class Registracija{
             kategorija=kat;
             registarskaOznaka=ozn;
         }
-        void ispisiRegistracija (){
+        void ispisiRegistracija ()const{
             std::cout <<"Registrovan do: "<< doKojeGodine << std::endl;
             std::cout <<"Kategorija: "<< kategorija << std::endl;
             std::cout <<"Registarska oznaka: "<< registarskaOznaka << std::endl;

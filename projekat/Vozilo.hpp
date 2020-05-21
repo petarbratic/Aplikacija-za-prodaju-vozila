@@ -37,7 +37,8 @@ class Vozilo{
                 menjac (Vvrsta, VbrojStepenaPrenosa)
                 {brojVozila++;
                 id=Vid;}
-        virtual void ispisi (){
+        virtual void ispisi ()const{
+            cout<<"Id vozila je: "<<id<<endl;
             prodavac.ispisiKorisnik();
             motor.ispisiMotor();
             mestoprodaje.ispisiMestoProdaje();
@@ -54,6 +55,8 @@ class Vozilo{
             brojVozila--;
         }
 
+        int getid()const{ return id;}
+        string getmarka(){return marka.nazivMarke;}
 };
 
 

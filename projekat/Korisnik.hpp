@@ -1,8 +1,9 @@
 #ifndef KORISNIK_HPP_INCLUDED
 #define KORISNIK_HPP_INCLUDED
-
+#include <vector>
 #include <fstream>
 #include <string.h>
+
 using namespace std;
 class Korisnik{
     private:
@@ -12,6 +13,7 @@ class Korisnik{
         std::string brojTelefona;
         std::string korisnickoIme;
         std::string lozinka;
+
     public:
         Korisnik(std::string i, std::string p, bool kilip, std::string broj, std::string username, std::string password){
             ime=i;
@@ -20,6 +22,18 @@ class Korisnik{
             brojTelefona=broj;
             korisnickoIme=username;
             lozinka=password;
+        }
+        string getime()const{
+            return ime;
+        }
+        string getprezime()const{
+            return prezime;
+        }
+        string getkorisnickoime()const{
+            return korisnickoIme;
+        }
+        string getlozinka()const{
+            return lozinka;
         }
         void citajTxt(std::string nazivFajla){
             std::string linija;
@@ -35,7 +49,7 @@ class Korisnik{
             std::cout << "Neuspesno otvoren fajl";
             }
 
-        void pisiTxt(std::string nazivFajla, Korisnik k22,/* std::string uime, std::string uprezime, bool ukilip, std::string ubroj, std::string uuser, std::string upass , */char mode='w'){
+        void pisiTxt(std::string nazivFajla,const Korisnik& k22,/* std::string uime, std::string uprezime, bool ukilip, std::string ubroj, std::string uuser, std::string upass , */char mode='w'){
                     std::ofstream fajl;
                     if (mode=='a'){
                         fajl.open (nazivFajla, std::ios_base::app);
@@ -47,7 +61,7 @@ class Korisnik{
                     fajl.close();
 
 }
-        void ispisiKorisnik (){
+        void ispisiKorisnik ()const{
             std::cout<<"Ime korisnika: " << ime << std::endl;
             std::cout <<"Prezime korisnika: "<< prezime << std::endl;
             switch (kupacIliProd){
@@ -61,6 +75,7 @@ class Korisnik{
             std::cout <<"Korisnicko ime: "<< korisnickoIme << std::endl;
             //std::cout <<"Lozinka: "<< lozinka << std::endl;
         }
+
 };
 
 #endif // KORISNIK_HPP_INCLUDED

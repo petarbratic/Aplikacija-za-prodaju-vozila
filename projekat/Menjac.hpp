@@ -11,7 +11,7 @@ class Menjac{
             vrsta=vr;
             brojStepenaPrenosa=brojst;
         }
-        void ispisiMenjac (){
+        void ispisiMenjac ()const{
             cout<<"Menjac: ";
             if (vrsta==MANUELNI){
                 std::cout << "MANUELNI" << std::endl;}

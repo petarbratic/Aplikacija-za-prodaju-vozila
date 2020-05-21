@@ -26,12 +26,12 @@ public:
                         Vvrsta, VbrojStepenaPrenosa),
                 opremazaauto (Autoklima, Autonavigacija, srv, temp, magla, parking, kuk, fap, masaza)
                 {}
-        void ispisi (){
+        void ispisi ()const{
             Vozilo::ispisi();
-            opremazaauto.ispisiOpremaZaAuto();
+            opremazaauto.ispisi();
         }
-        int getid()const{ return id;}
-        string getmarka(){return marka.nazivMarke;}
+      /*  int getid()const{ return id;}
+        string getmarka(){return marka.nazivMarke;}  */
 };
 
 
