@@ -49,7 +49,7 @@ class Korisnik{
             std::cout << "Neuspesno otvoren fajl";
             }
 
-        void pisiTxt(std::string nazivFajla,const Korisnik& k22,/* std::string uime, std::string uprezime, bool ukilip, std::string ubroj, std::string uuser, std::string upass , */char mode='w'){
+        void pisiTxt(std::string nazivFajla,const Korisnik& k22,char mode='w'){
                     std::ofstream fajl;
                     if (mode=='a'){
                         fajl.open (nazivFajla, std::ios_base::app);

@@ -47,6 +47,7 @@
 		<Unit filename="OpremaZaAuto.hpp" />
 		<Unit filename="OpremaZaKamion.hpp" />
 		<Unit filename="Registracija.hpp" />
+		<Unit filename="Sacuvana.hpp" />
 		<Unit filename="Skoljka.hpp" />
 		<Unit filename="Vozilo.hpp" />
 		<Unit filename="fajlvozilo.txt" />

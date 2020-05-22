@@ -48,6 +48,33 @@ class Vozilo{
             menjac.ispisiMenjac();
         }
 
+      /*  void citajTxt(string nazivFajla){
+            string linija;
+            std::ifstream fajl (nazivFajla);
+            if (fajl.is_open()){
+                while ( getline (fajl,linija) ){
+                std::cout << linija << '\n';
+            }
+            fajl.close();
+            }
+
+            else
+            std::cout << "Neuspesno otvoren fajl";
+            }
+
+        void pisiTxt(std::string nazivFajla,const Vozilo& v1,char mode='w'){
+                    std::ofstream fajl;
+                    if (mode=='a'){
+                        fajl.open (nazivFajla, std::ios_base::app);
+                    }
+                    else{
+                        fajl.open (nazivFajla);}
+                    fajl << v1.id << "," << v1.ime << "," << k22.kupacIliProd << "," << k22.brojTelefona << "," << k22.korisnickoIme << "," << k22.lozinka <<std::endl;
+
+                    fajl.close();
+
+} */
+
         void ispisiBrojVozila(){
             std::cout << brojVozila <<std::endl;
         }

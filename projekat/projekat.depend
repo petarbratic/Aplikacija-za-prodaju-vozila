@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1590061501 source:c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\main.cpp
+1590157042 source:c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\main.cpp
 	<iostream>
 	<fstream>
 	"Korisnik.hpp"
@@ -15,9 +15,11 @@
 	"Automobil.hpp"
 	"Izlog.hpp"
 	"Baza.hpp"
+	"Sacuvana.hpp"
 	<stdlib.h>
+	<string>
 
-1590061152 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\korisnik.hpp
+1590141360 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\korisnik.hpp
 	<vector>
 	<fstream>
 	<string.h>
@@ -36,7 +38,7 @@
 
 1589957985 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\oprema.hpp
 
-1590047646 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\vozilo.hpp
+1590150250 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\vozilo.hpp
 	<fstream>
 	"Korisnik.hpp"
 	"Motor.hpp"
@@ -75,11 +77,16 @@
 	"Kamion.hpp"
 	<vector>
 
-1589911091 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\izlog.hpp
+1590156899 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\izlog.hpp
 	"Automobil.hpp"
 	"Kamion.hpp"
 	<vector>
 
-1590046869 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\baza.hpp
+1590141494 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\baza.hpp
 	"Korisnik.hpp"
+	<string.h>
+
+1590156921 c:\users\brati\onedrive\documents\github\aplikacija-za-prodaju-vozila\projekat\sacuvana.hpp
+	"Automobil.hpp"
+	"Kamion.hpp"
 

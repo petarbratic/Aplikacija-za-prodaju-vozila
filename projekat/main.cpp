@@ -13,7 +13,9 @@
 #include "Automobil.hpp"
 #include "Izlog.hpp"
 #include "Baza.hpp"
+#include "Sacuvana.hpp"
 #include <stdlib.h>
+#include <string>
 using namespace std;
 
 int Vozilo::brojVozila=0;
@@ -117,6 +119,26 @@ ostream& operator << (ostream& izlaz, const Skoljka& skolj)
     return izlaz;
 }
 
+vector<string> splitSen(string str, char c=',')
+    {
+        string w = "";
+        vector<string> v;
+        for (auto rem : str)
+        {
+            if (rem==c)
+            {
+                v.push_back(w);
+                w="";
+            }
+            else
+            {
+                w=w+rem;
+            }
+        }
+        v.push_back(w);
+
+        return v;
+    }
 
 int main()
 {
@@ -194,6 +216,7 @@ int main()
     string unos_brojTelefona;
     string unos_korisnickoime;
     string unos_lozinka;
+    vector<Sacuvana> sacuvani;
     do
     {
 
@@ -203,7 +226,6 @@ int main()
         cout<<"  3.Pregled svih vozila"<<endl;
         cout<<"  4.Pregled vozila na placu u Novom Sadu"<<endl;
         cout<<"  5.Pregled vozila na placu u Beogradu"<<endl;
-
         cout<<"  6.Izlaz"<<endl;
         cout<<"Unesite broj sa tastature: ";
         cin>>izbor;
@@ -221,11 +243,13 @@ int main()
             {
                 do
                 {
+                    /* cout<<b1.getImeTrenutnog("korisnici.txt", korisnickoime, sifra)<<" ";
+                    cout<<b1.getPrezimeTrenutnog("korisnici.txt", korisnickoime, sifra)<<endl; */
                     cout<<"-----"<<korisnickoime<<"-----"<<endl;
                     cout<<"  1.Pregled svih vozila"<<endl;
                     cout<<"  2.Pregled vozila na placu u Novom Sadu"<<endl;
                     cout<<"  3.Pregled vozila na placu u Beogradu"<<endl;
-                    cout<<"  4.Sacuvana vozila"<<endl;
+                    cout<<"  4.Sacuvano vozilo"<<endl;
                     cout<<"  5.Glavni meni"<<endl;
                     cout<<"Unesite broj sa tastature: ";
                     cin>>izbor2;
@@ -243,11 +267,22 @@ int main()
                         {
                             cout<<"Unesite id zeljenog vozila: ";
                             cin>>sacuv2;
+                            ofstream fajl;
+                            string tempIme=b1.getImeTrenutnog("korisnici.txt", korisnickoime, sifra);
+                            string tempPrezime=b1.getPrezimeTrenutnog("korisnici.txt", korisnickoime, sifra);
+                            string sacuvana="sacuvana";
+                            string tempic1=sacuvana.append(tempIme);
+                            string tempic2=tempic1.append(tempPrezime);
+                            string tempic3=tempic2.append(".txt");
+                            fajl.open(tempic3, ios_base::app);
+                            fajl<< b1.getImeTrenutnog("korisnici.txt", korisnickoime, sifra)<<
+                                ","<< b1.getPrezimeTrenutnog("korisnici.txt", korisnickoime, sifra)<<
+                                ","<<sacuv2<<endl;
 
                         }
                         if(sacuv=='N')
                         {
-                            cout<<"ne zeli da sacuva vozilo"<<endl;
+                            cout<<"OK"<<endl;
                         }
 
 
@@ -255,24 +290,86 @@ int main()
                     }
                     case 2:
                         i2.ispisiVozila();
+                        cout<<"Da li zelite da sacuvate neko vozilo? (Y/N)"<<endl;
+                        cin>>sacuv;
+                        if(sacuv=='Y')
+                        {
+                            cout<<"Unesite id zeljenog vozila: ";
+                            cin>>sacuv2;
+                            ofstream fajl;
+                            string tempIme=b1.getImeTrenutnog("korisnici.txt", korisnickoime, sifra);
+                            string tempPrezime=b1.getPrezimeTrenutnog("korisnici.txt", korisnickoime, sifra);
+                            string sacuvana="sacuvana";
+                            string tempic1=sacuvana.append(tempIme);
+                            string tempic2=tempic1.append(tempPrezime);
+                            string tempic3=tempic2.append(".txt");
+                            fajl.open(tempic3, ios_base::app);
+                            fajl<< b1.getImeTrenutnog("korisnici.txt", korisnickoime, sifra)<<
+                                ","<< b1.getPrezimeTrenutnog("korisnici.txt", korisnickoime, sifra)<<
+                                ","<<sacuv2<<endl;
+
+                        }
+                        if(sacuv=='N')
+                        {
+                            cout<<"OK"<<endl;
+                        }
                         break;
                     case 3:
                         i.ispisiVozila();
+                        cout<<"Da li zelite da sacuvate neko vozilo? (Y/N)"<<endl;
+                        cin>>sacuv;
+                        if(sacuv=='Y')
+                        {
+                            cout<<"Unesite id zeljenog vozila: ";
+                            cin>>sacuv2;
+                            ofstream fajl;
+                            string tempIme=b1.getImeTrenutnog("korisnici.txt", korisnickoime, sifra);
+                            string tempPrezime=b1.getPrezimeTrenutnog("korisnici.txt", korisnickoime, sifra);
+                            string sacuvana="sacuvana";
+                            string tempic1=sacuvana.append(tempIme);
+                            string tempic2=tempic1.append(tempPrezime);
+                            string tempic3=tempic2.append(".txt");
+                            fajl.open(tempic3, ios_base::app);
+                            fajl<< b1.getImeTrenutnog("korisnici.txt", korisnickoime, sifra)<<
+                                ","<< b1.getPrezimeTrenutnog("korisnici.txt", korisnickoime, sifra)<<
+                                ","<<sacuv2<<endl;
+                        }
+                        if(sacuv=='N')
+                        {
+                            cout<<"OK"<<endl;
+                        }
                         break;
                     case 4:
-                        cout << "4 opcija"<<endl;
-                        break;
-                    }
+                        cout << "-----Ispis sacuvanog vozila-----"<<endl;
+                        std::string linija;
+                        std::ifstream fajl ("sacuvana"+b1.getImeTrenutnog("korisnici.txt", korisnickoime, sifra)+b1.getPrezimeTrenutnog("korisnici.txt", korisnickoime, sifra)+".txt");
+                        if (fajl.is_open())
+                        {
+                            while ( getline (fajl,linija) )
+                            {
+                                vector<string> result;
+                                result=splitSen(linija);
+                                i.pretragaPoImePrezimeId(stoi(result[2]));
+                                i2.pretragaPoImePrezimeId(stoi(result[2]));
+                            }
+                            fajl.close();
+                        }
 
+                        else {
+                            std::cout << "Neuspesno otvoren fajl";
+                    }
+                    break;
                 }
-                while (izbor2!=5);
+
             }
-            else
-            {
-                cout<<"Pogresno korisnicko ime ili lozinka"<<endl;
-            }
-            break;
-        case 2:
+            while (izbor2!=5);
+        }
+        else
+        {
+            cout<<"Pogresno korisnicko ime ili lozinka"<<endl;
+        }
+        break;
+    case 2:
         {
 
             cout <<"-----REGISTRACIJA KORISNIKA-----"<<endl;
@@ -313,62 +410,27 @@ int main()
 
             break;
         }
-        case 3:
+    case 3:
         {
             cout <<"-----PREGLED SVIH VOZILA-----"<<endl;
             i.ispisiSvaVozila();
-            cout<<"Da li zelite da sacuvate neko vozilo? (Y/N)"<<endl;
-            cin>>sacuv;
-            if(sacuv=='Y')
-            {
-                cout<<"Unesite id zeljenog vozila: ";
-                cin>>sacuv2;
-
-            }
-            if(sacuv=='N')
-            {
-                cout<<"ne zeli da sacuva vozilo"<<endl;
-            }
+            i2.ispisiSvaVozila();
             break;
         }
-        case 4:
-            cout <<"-----PREGLED VOZILA U NOVOM SADU-----"<<endl;
-            i2.ispisiVozila();
-            cout<<"Da li zelite da sacuvate neko vozilo? (Y/N)"<<endl;
-            cin>>sacuv;
-            if(sacuv=='Y')
-            {
-                cout<<"Unesite id zeljenog vozila: ";
-                cin>>sacuv2;
-
-            }
-            if(sacuv=='N')
-            {
-                cout<<"ne zeli da sacuva vozilo"<<endl;
-            }
-            break;
-        case 5:
-            cout <<"-----PREGLED VOZILA U BEOGRADU-----"<<endl;
-            i.ispisiSvaVozila();
-            cout<<"Da li zelite da sacuvate neko vozilo? (Y/N)"<<endl;
-            cin>>sacuv;
-            if(sacuv=='Y')
-            {
-                cout<<"Unesite id zeljenog vozila: ";
-                cin>>sacuv2;
-
-            }
-            if(sacuv=='N')
-            {
-                cout<<"ne zeli da sacuva vozilo"<<endl;
-            }
-            break;
-
-        }
+    case 4:
+        cout <<"-----PREGLED VOZILA U NOVOM SADU-----"<<endl;
+        i2.ispisiVozila();
+        break;
+    case 5:
+        cout <<"-----PREGLED VOZILA U BEOGRADU-----"<<endl;
+        i.ispisiSvaVozila();
+        break;
 
     }
-    while (izbor!=6);
+
+}
+while (izbor!=6);
 
 
-    return 0;
+return 0;
 }
