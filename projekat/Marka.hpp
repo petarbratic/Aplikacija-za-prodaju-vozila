@@ -6,8 +6,9 @@ class Marka{
 
         int godOsnivanja;
         std::string zemljaOdakleJe;
-    public:
         std::string nazivMarke;
+    public:
+
         Marka (std::string n, int g, std::string z){
             nazivMarke=n;
             godOsnivanja=g;
@@ -18,7 +19,7 @@ class Marka{
             std::cout <<"Godina osnivanja: "<< godOsnivanja << std::endl;
             std::cout <<"Drzava proizvodnje: "<< zemljaOdakleJe << std::endl;
         }
-        string getnazivMarke(){return nazivMarke;}
+        string getnazivMarke()const{return nazivMarke;}
 };
 
 #endif // MARKA_HPP_INCLUDED

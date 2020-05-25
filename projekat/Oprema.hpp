@@ -3,7 +3,6 @@
 
 class Oprema{
 protected:
-    /// protected cemo isto naknadno objasniti
     bool klima;
     bool navigacija;
 public:

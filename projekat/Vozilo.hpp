@@ -83,7 +83,7 @@ class Vozilo{
         }
 
         int getid()const{ return id;}
-        string getmarka(){return marka.nazivMarke;}
+        string getmarka()const{return marka.getnazivMarke();}
 };
 
 
