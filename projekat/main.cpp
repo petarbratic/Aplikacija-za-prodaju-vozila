@@ -13,7 +13,6 @@
 #include "Automobil.hpp"
 #include "Izlog.hpp"
 #include "Baza.hpp"
-#include "Sacuvana.hpp"
 #include <stdlib.h>
 #include <string>
 using namespace std;
@@ -120,25 +119,25 @@ ostream& operator << (ostream& izlaz, const Skoljka& skolj)
 }
 
 vector<string> splitSen(string str, char c=',')
+{
+    string w = "";
+    vector<string> v;
+    for (auto rem : str)
     {
-        string w = "";
-        vector<string> v;
-        for (auto rem : str)
+        if (rem==c)
         {
-            if (rem==c)
-            {
-                v.push_back(w);
-                w="";
-            }
-            else
-            {
-                w=w+rem;
-            }
+            v.push_back(w);
+            w="";
         }
-        v.push_back(w);
-
-        return v;
+        else
+        {
+            w=w+rem;
+        }
     }
+    v.push_back(w);
+
+    return v;
+}
 
 int main()
 {
@@ -216,7 +215,6 @@ int main()
     string unos_brojTelefona;
     string unos_korisnickoime;
     string unos_lozinka;
-    vector<Sacuvana> sacuvani;
     do
     {
 
@@ -355,21 +353,22 @@ int main()
                             fajl.close();
                         }
 
-                        else {
+                        else
+                        {
                             std::cout << "Neuspesno otvoren fajl";
+                        }
+                        break;
                     }
-                    break;
-                }
 
+                }
+                while (izbor2!=5);
             }
-            while (izbor2!=5);
-        }
-        else
-        {
-            cout<<"Pogresno korisnicko ime ili lozinka"<<endl;
-        }
-        break;
-    case 2:
+            else
+            {
+                cout<<"Pogresno korisnicko ime ili lozinka"<<endl;
+            }
+            break;
+        case 2:
         {
 
             cout <<"-----REGISTRACIJA KORISNIKA-----"<<endl;
@@ -410,27 +409,27 @@ int main()
 
             break;
         }
-    case 3:
+        case 3:
         {
             cout <<"-----PREGLED SVIH VOZILA-----"<<endl;
             i.ispisiSvaVozila();
             i2.ispisiSvaVozila();
             break;
         }
-    case 4:
-        cout <<"-----PREGLED VOZILA U NOVOM SADU-----"<<endl;
-        i2.ispisiVozila();
-        break;
-    case 5:
-        cout <<"-----PREGLED VOZILA U BEOGRADU-----"<<endl;
-        i.ispisiSvaVozila();
-        break;
+        case 4:
+            cout <<"-----PREGLED VOZILA U NOVOM SADU-----"<<endl;
+            i2.ispisiVozila();
+            break;
+        case 5:
+            cout <<"-----PREGLED VOZILA U BEOGRADU-----"<<endl;
+            i.ispisiSvaVozila();
+            break;
+
+        }
 
     }
-
-}
-while (izbor!=6);
+    while (izbor!=6);
 
 
-return 0;
+    return 0;
 }
